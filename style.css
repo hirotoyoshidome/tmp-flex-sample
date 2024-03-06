@@ -1,0 +1,26 @@
+/* flexにして自動で折り返す */
+.tmp-flex {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+/* 幅を25%未満にして4つで折り返しさせる。わかりやすいようにborderも指定しておく */
+.tmp-card {
+    width: 24%;
+    margin: 0;
+    height: 200px;
+    border: #000 1px solid;
+}
+
+@media screen and (max-width: 599px) {
+  /* flexからblockに */
+  .tmp-flex {
+    display: block;
+  }
+  /* 大きさを変えて中央に揃える */
+  .tmp-card {
+    width: 80%;
+    margin: 2px auto;
+    height: 120px;
+  }
+}
